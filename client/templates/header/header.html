@@ -1,0 +1,21 @@
+<template name="header">
+  <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/admin" class="navbar-brand">Production Planning</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        {{#if currentUser}}
+          <div class="navbar-right plain">
+            <a href="/signout" class="btn btn-danger navbar-btn"><i class="fa fa-lock"></i> Sign Out</a>
+          </div>
+        {{else}}
+          <div class="navbar-right plain">
+            <a href="/signin" class="btn btn-default navbar-btn">Sign In</a>
+            <a href="/register" class="btn btn-primary navbar-btn">Register</a>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+</template>
